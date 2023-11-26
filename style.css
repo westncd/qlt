@@ -1,0 +1,102 @@
+body {
+    font-family: Arial;  
+    background-image: url('img/background.jpg');
+    background-size: cover;
+  }
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: blue;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: darkblue;
+}
+
+.btn-register {
+  background-color: green;  
+  color: white;
+}
+
+.btn-register:hover {
+  background-color: darkgreen;
+}
+
+.btn-back {
+  background-color: orange;
+  color: white; 
+}
+
+.btn-back:hover {
+  background-color: darkorange;
+}
+
+  
+  #login {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 90px;  
+    padding: 25px;
+    border-radius: 5px;  
+  }
+  #register {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 90px;  
+    padding: 25px;
+    border-radius: 5px;  
+  }
+  
+  .form {
+    font-size:25px;
+    text-align:center;
+    padding:20px;
+    background-color:#ddd;
+    opacity:0.7;
+    border-radius: 10px;  
+  }
+
+  .message {
+    font-size: 15px;
+  }
+
+  h1 {
+    background-image: url('img/text-bg.png');
+    background-size: contain;
+    height: 100px;
+    width: 300px;
+    background-position: center; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    color: #ddd;
+    padding: 40px;
+  }
+
+  label {
+    display: block; 
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;  
+  }
+  
+  button {
+    background: #007bff; 
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
