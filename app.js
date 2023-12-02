@@ -13,3 +13,24 @@
 
   });
 
+  function showHostLogin() {
+    document.getElementById("host-login").style.display = "block";  
+    document.getElementById("tenant-login").style.display = "none";
+  }
+
+  function showTenantLogin() {
+    document.getElementById("tenant-login").style.display = "block";
+    document.getElementById("host-login").style.display = "none"; 
+  }
+
+  function loginHost() {
+    let id = document.getElementById("host-id").value;
+    window.location.href = "host.html?id=" + id; 
+  }
+
+  function loginTenant() {
+    let motelId = document.getElementById("motel-id").value; 
+    let roomNo = document.getElementById("room-no").value;
+    window.location.href = "tenant.html?motelid=" + motelId + "&roomno=" + roomNo;
+  }
+
