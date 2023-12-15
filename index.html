@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>Motel Manager</title>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="style.css"> 
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
 </head>
 
@@ -14,20 +15,12 @@
     <p>Quản lý nhà trọ dễ dàng - hiệu quả</p>
   </div>
 
-  <!-- Menu điều hướng -->
-  <ul class="menu">
-    <li><a href="#">Trang chủ</a></li>
-    <li><a href="#">Giới thiệu</a></li>
-    <li><a href="#">Liên hệ</a></li>
-  </ul>
 
-  <!-- Nội dung trang -->
   <div class="content">
     <div class="login-form">
-      <h3>Đăng nhập</h3>
-      <form>
-        <input type="text" placeholder="Tên đăng nhập">
-        <input type="password" placeholder="Mật khẩu">
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Tên đăng nhập">
+        <input type="password" id="password" placeholder="Mật khẩu">
         
         <button type="submit">Đăng nhập</button>
       </form>
@@ -40,6 +33,7 @@
   </div>
   
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="app.js"></script>
 
 </body>

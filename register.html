@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Đăng ký tài khoản</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Motel Manager - Đăng ký</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
 </head>
 
 <body>
+
   <div class="header">
     <h1>Motel Manager</h1>
     <p>Quản lý nhà trọ dễ dàng - hiệu quả</p>
   </div>
 
-  <div class="form-register">
+  <div class="content">
 
-    <h1>Đăng ký</h1>
+    <form class="login-form">
 
-    <form>
-
-      <label>Họ và tên</label>
-      <input type="text" name="name">
-
-      <label>Email</label>
-      <input type="email" name="email">
-
-      <label>Mật khẩu</label>
-      <input type="password" name="password">
-    
-      <label>Nhập lại mật khẩu</label>  
-      <input type="password" name="repassword">
-
-      <button>Đăng ký</button>
-
-      <div class="links">
-        <a href="index.html">Đăng nhập</a> | 
-        <a href="#">Quên mật khẩu?</a>
+      <div class="input-group">
+        <input type="text" placeholder="Họ và tên">
       </div>
 
+      <div class="input-group">
+        <input type="text" placeholder="Số điện thoại">
+      </div>
+
+      <div class="input-group">
+        <input type="email" placeholder="Email">
+      </div>
+
+      <div class="input-group">
+        <input type="password" placeholder="Mật khẩu">
+      </div>
+
+      <div class="input-group">
+        <input type="password" placeholder="Nhập lại mật khẩu">
+      </div>
+
+      <button type="submit">Đăng ký</button>
+      <div class="helper">
+        <a href="index.html">Quay lại</a>
+      </div>
     </form>
 
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="app.js"></script>
-  
+
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang quản lý</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="style.css" rel="stylesheet">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+</head>
+
+<body>
+
+  <sidebar>
+      <ul class="menu">
+        <li><a href="host.html">Tổng quan</a></li>
+        <li><a href="motels.html">Danh sách khu trọ</a></li>
+        <li><a href="rooms.html">Danh sách phòng</a></li>
+        <li><a href="tenants.html">Danh sách khách thuê</a></li>
+        <li><a href="finance.html">Quản lý tài chính</a></li>
+        <li><a href="notifications.html">Thông báo</a></li>
+      </ul>
+  </sidebar>
+
+  <main>
+        <div class="chart-container">
+          <canvas id="myChart"></canvas> 
+        </div>
+     
+        <div class="summary">
+            <div class="card">
+              <div class="title">Tổng doanh thu</div>
+              <div class="value">35.000.000 VND</div> 
+            </div>
+          </div>
+
+        <div class="overview">
+            <div class="metric">
+              <div class="title">Khu trọ</div>  
+              <div class="value">5</div>
+            </div>
+            
+            <div class="metric">
+             <div class="title">Phòng cho thuê</div>
+             <div class="value">25</div>
+            </div>
+    
+            <div class="metric">
+             <div class="title">Khách đang thuê</div>
+             <div class="value">15</div>
+            </div>
+        </div>
+
+  </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+  <script>
+
+    var ctx = document.getElementById("myChart");
+    var data = {
+      labels: ["Tháng 1","Tháng 2","Tháng 3","Tháng 4","Tháng 5","Tháng 6"],
+      datasets: [{
+        label: "Doanh thu",
+        data: [3000,2000,1000,5000,4000,1000],
+        backgroundColor: "rgba(75,192,192,0.2)"
+      }]
+    };
+
+    var chartOptions = {
+      responsive: true
+    };
+
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: chartOptions
+    });
+
+  </script>
+
+</body>
+
+</html>
