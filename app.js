@@ -15,7 +15,7 @@ $("#loginForm").submit(function(event) {
     if(username == "host" && password == "1234") {
     
       // Chuyển trang nếu là chủ trọ  
-      window.location.href = "/host.html";
+      window.location.href = "host.html";
 
     } else if(username == "tenant" && password == "1234") {
 
