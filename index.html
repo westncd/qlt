@@ -2,40 +2,45 @@
 <html>
 <head>
   <title>Motel Manager</title>
-  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="style.css"> 
+
 </head>
 
 <body>
 
-  <center>
+  <div class="header">
     <h1>Motel Manager</h1>
-  </center>
-  <form id="login">
-  <div class="form">
-
-    <h2>Đăng Nhập</h2>
-
-    <div class="form-group">
-      <label>Tài khoản:</label>
-      <input type="text" id="username">
-    </div>
-
-    <div class="form-group">  
-      <label>Mật khẩu:</label>
-      <input type="password" id="password">
-    </div>
-
-    <button class="btn-submit" type="submit">Đăng nhập</button>
-    </form>
-    <p>
-      Chưa có tài khoản? 
-      <a href="reigster.html">Đăng ký</a>
-    </p>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-
+    <p>Quản lý nhà trọ dễ dàng - hiệu quả</p>
   </div>
 
+  <!-- Menu điều hướng -->
+  <ul class="menu">
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Giới thiệu</a></li>
+    <li><a href="#">Liên hệ</a></li>
+  </ul>
+
+  <!-- Nội dung trang -->
+  <div class="content">
+    <div class="login-form">
+      <h3>Đăng nhập</h3>
+      <form>
+        <input type="text" placeholder="Tên đăng nhập">
+        <input type="password" placeholder="Mật khẩu">
+        
+        <button type="submit">Đăng nhập</button>
+      </form>
+      <div class="helper">
+        <a href="register.html">Đăng ký</a> | 
+        <a href="#">Quên mật khẩu?</a>
+      </div>
+    </div>
+
+  </div>
+  
+
+  <script src="app.js"></script>
 
 </body>
 </html>

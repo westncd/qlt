@@ -1,4 +1,4 @@
-  $('#login').submit(function(e) {
+  $('#login').submit((e) {
 
     e.preventDefault();
 
