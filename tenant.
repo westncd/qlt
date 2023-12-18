@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Danh sách khachs thuê</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <link href="style.css" rel="stylesheet">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+        <ul class="menu">
+          <li><a href="tenants.html">Trang chủ</a></li>
+          <li><a href="rooms.html">Thông tin phòng trọ</a></li>
+          <li><a href="notifications-tenant.html">Thông báo</a></li>
+          <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
+          <li><a href="index.html">Đăng xuất</a></li>
+        </ul>
+    </div>
+  
+  
+    <div class="content">
+      <div class="content">
+        <center>
+          <h3>Khu trọ A</h3>
+        </center>
+      
+        <div class="overview">
+          <div class="metric">
+            <h4>Bảng thông báo</h4>
+            <div> Nay 25/11/2023. khu trọ A chúng ta cắt điện từ 7h sáng đến 7h tối</div>
+          </div>
+          
+        </div>
+      
+      </div>
+    </div>
+
+</body>
+
+</html>
