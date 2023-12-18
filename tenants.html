@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Danh sách khachs thuê</title>
-
+  <title>Danh sách khách thuê</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
   <link href="style.css" rel="stylesheet">
@@ -12,36 +12,83 @@
 </head>
 
 <body>
-
   <div class="container">
     <div class="sidebar">
         <ul class="menu">
-          <li><a href="tenants.html">Trang chủ</a></li>
-          <li><a href="rooms.html">Thông tin phòng trọ</a></li>
-          <li><a href="notifications-tenant.html">Thông báo</a></li>
-          <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
+          <li><a href="host.html">Trang chủ</a></li>
+          <li><a href="motels.html">Danh sách khu trọ</a></li>
+          <li><a href="notifications.html">Thông báo</a></li>
+          <li><a href="finance.html">Thông tin chủ trọ</a></li>
+          <li><a href="tenants.html">Danh sách khách thuê</a></li>
           <li><a href="index.html">Đăng xuất</a></li>
         </ul>
     </div>
   
   
     <div class="content">
-      <div class="content">
-        <center>
-          <h3>Khu trọ A</h3>
+      <center>   
+        <h3>Danh sách khách thuê</h3>
         </center>
-      
-        <div class="overview">
-          <div class="metric">
-            <h4>Bảng thông báo</h4>
-            <div> Nay 25/11/2023. khu trọ A chúng ta cắt điện từ 7h sáng đến 7h tối</div>
-          </div>
-          
-        </div>
-      
-      </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Tên</th>
+          <th>Khu trọ</th>
+          <th>Phòng</th>
+          <th>Ngày nhận phòng</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Bùi Xuân Sơn</td>
+          <td>Khu trọ A</td>
+          <td>203</td>  
+          <td>20/05/2023</td>
+          <td>
+            <button class="add">Sửa</button>
+            <button class="delete">Xóa</button>
+          </td>
+        </tr>
+
+        <tr>
+            <td>Hoàng Văn Cường</td>
+            <td>Khu trọ B</td>
+            <td>301</td>  
+            <td>19/05/2023</td>
+            <td>
+              <button class="add">Sửa</button>
+              <button class="delete">Xóa</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Đào Duy Minh</td>
+            <td>Khu trọ C</td>
+            <td>201</td>  
+            <td>08/03/2023</td>
+            <td>
+              <button class="add">Sửa</button>
+              <button class="delete">Xóa</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Nguyễn Mậu Thành</td>
+            <td>Khu trọ C</td>
+            <td>202</td>  
+            <td>20/11/2023</td>
+            <td>
+              <button class="add">Sửa</button>
+              <button class="delete">Xóa</button>
+            </td>
+          </tr>
+
+      </tbody>
+    </table>
+    <button class="add">Thêm khách thuê</button>
     </div>
 
 </body>
-
 </html>
