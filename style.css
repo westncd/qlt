@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  background-image: url('img/background.jpg');
+  background-image: url('background.jpg');
   background-size: cover;
 }
 
@@ -29,7 +29,7 @@ h1 {
   font-weight: bold;
   color: #fff;
   text-align: center;
-  background-image: url('img/text-bg.png');
+  background-image: url('text-bg.png');
   background-size: cover;
   background-position: center;
   padding: 50px 0;
@@ -206,29 +206,4 @@ td a {
   text-decoration: none;  
   border-radius: 3px;
   margin-right: 5px;
-}
-
-
-
-.payments {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card {
-  width: 45%;
-  background-color: #6b6868;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 5px;  
-}
-
-.card img {
-  width: 100%;
-  margin-bottom: 10px;
-} 
-
-.account {
-  font-size: 14px;
-  text-align: center; 
 }
