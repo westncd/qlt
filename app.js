@@ -15,12 +15,12 @@ $("#loginForm").submit(function(event) {
     if(username == "host" && password == "1234") {
     
       // Chuyển trang nếu là chủ trọ  
-      window.location.href = "host.html";
+      window.location.href = "/host.html";
 
     } else if(username == "tenant" && password == "1234") {
 
       // Chuyển trang nếu là người thuê
-      window.location.href = "/home.html";
+      window.location.href = "tenants.html";
 
     } else {
       // Hiển thị thông báo lỗi nếu tên đăng nhập không hợp lệ
