@@ -20,7 +20,7 @@ $("#loginForm").submit(function(event) {
     } else if(username == "tenant" && password == "1234") {
 
       // Chuyển trang nếu là người thuê
-      window.location.href = "tenants.html";
+      window.location.href = "tenant.html";
 
     } else {
       // Hiển thị thông báo lỗi nếu tên đăng nhập không hợp lệ
