@@ -12,36 +12,49 @@
 </head>
 
 <body>
-
-  <div class="container">
-    <div class="sidebar">
-        <ul class="menu">
-          <li><a href="tenant.html">Trang chủ</a></li>
-          <li><a href="rooms.html">Thông tin phòng trọ</a></li>
-          <li><a href="notifications-tenant.html">Thông báo</a></li>
-          <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
-          <li><a href="index.html">Đăng xuất</a></li>
-        </ul>
-    </div>
-  
-  
-    <div class="content">
-      <div class="content">
-        <center>
-          <h3>Khu trọ A</h3>
-        </center>
+    <script>
+      function showInfo() {
+        var code = prompt("Nhập mã trọ");
+        var room = prompt("Nhập số phòng");
+        
+        if(code == "A" && room == "203") {
+          document.getElementById("info").style.display = "block";
+        }
+      }
+      </script>
       
-        <div class="overview">
-          <div class="metric">
-            <h4>Bảng thông báo</h4>
-            <div> Nay 25/11/2023. khu trọ A chúng ta cắt điện từ 7h sáng đến 7h tối</div>
+      <button onclick="showInfo()">Nhập mã trọ</button>
+      
+      <div id="info" style="display:none">
+        <div class="container">
+          <div class="sidebar">
+              <ul class="menu">
+                <li><a href="tenants.html">Trang chủ</a></li>
+                <li><a href="rooms.html">Thông tin phòng trọ</a></li>
+                <li><a href="notifications-tenant.html">Thông báo</a></li>
+                <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
+                <li><a href="index.html">Đăng xuất</a></li>
+              </ul>
           </div>
-          
-        </div>
-      
+        
+        
+          <div class="content">
+            <div class="content">
+              <center>
+                <h3>Khu trọ A</h3>
+              </center>
+            
+              <div class="overview">
+                <div class="metric">
+                  <h4>Hi! Bùi Xuân Sơn</h4>
+                  <div> Nay 25/11/2023. khu trọ A chúng ta cắt điện từ 7h sáng đến 7h tối</div>
+                </div>
+                
+              </div>
+            
+            </div>
+          </div>
       </div>
-    </div>
-
 </body>
 
 </html>
