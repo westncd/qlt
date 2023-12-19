@@ -31,7 +31,7 @@ button {
   color: #fff; 
 }
 
-a {
+.link-btn {
   width: 100px;
   margin: 10px auto;
   display: block;
@@ -67,7 +67,7 @@ if (id) {
     <div class="container">
     <div class="sidebar">
         <ul class="menu">
-          <li><a href="tenant.html">Trang chủ</a></li>
+          <li><a href="">Trang chủ</a></li>
           <li><a href="rooms.html">Thông tin phòng trọ</a></li>
           <li><a href="notifications-tenant.html">Thông báo</a></li>
           <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
@@ -94,7 +94,7 @@ if (id) {
     <div class="container">
     <div class="sidebar">
         <ul class="menu">
-          <li><a href="tenant.html">Trang chủ</a></li>
+          <li><a href="">Trang chủ</a></li>
           <li><a href="rooms.html">Thông tin phòng trọ</a></li>
           <li><a href="notifications-tenant.html">Thông báo</a></li>
           <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
@@ -121,13 +121,19 @@ if (id) {
   $("#tenantInfo").html(`
     <input type="text" id="idInput" placeholder="Nhập mã phòng"> 
     <button onclick="goToId()">Truy cập</button>
+      <div class="link-btn">
       <a href="index.html">Quay lại</a>
+      </div>
   `);
   
   function goToId() {
     var inputId = $("#idInput").val();
     window.location.href = "tenant.html?id=" + inputId; 
   }
+
+  function back(){
+          history.back();
+      }
 }
 </script>
 
