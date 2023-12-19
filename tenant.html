@@ -9,52 +9,128 @@
 
   <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
+  <style>
+    #idInput {
+  width: 200px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
+}
+button {
+  width: 150px;
+  margin: 10px auto;
+  display: block;
+  
+  border: none;
+  border-radius: 20px;
+  
+  font-size: 16px;  
+  padding: 12px 16px;
+  background-color: #007bff;
+  color: #fff; 
+}
+
+a {
+  width: 100px;
+  margin: 10px auto;
+  display: block;
+  
+  border: none;
+  border-radius: 20px;
+  
+  font-size: 14px;  
+  text-align: center;
+  background-color: #818890;
+  color: #fff; 
+  text-decoration: none;
+}
+  </style>
+
 </head>
 
 <body>
-    <script>
-      function showInfo() {
-        var code = prompt("Nhập mã trọ");
-        var room = prompt("Nhập số phòng");
-        
-        if(code == "A" && room == "203") {
-          document.getElementById("info").style.display = "block";
-        }
-      }
-      </script>
-      
-      <button onclick="showInfo()">Nhập mã trọ</button>
-      
-      <div id="info" style="display:none">
-        <div class="container">
-          <div class="sidebar">
-              <ul class="menu">
-                <li><a href="tenants.html">Trang chủ</a></li>
-                <li><a href="rooms.html">Thông tin phòng trọ</a></li>
-                <li><a href="notifications-tenant.html">Thông báo</a></li>
-                <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
-                <li><a href="index.html">Đăng xuất</a></li>
-              </ul>
-          </div>
-        
-        
-          <div class="content">
-            <div class="content">
-              <center>
-                <h3>Khu trọ A</h3>
-              </center>
-            
-              <div class="overview">
-                <div class="metric">
-                  <h4>Hi! Bùi Xuân Sơn</h4>
-                  <div> Nay 25/11/2023. khu trọ A chúng ta cắt điện từ 7h sáng đến 7h tối</div>
-                </div>
-                
-              </div>
-            
-            </div>
-          </div>
+  
+    <div id="tenantInfo"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+var id = urlParams.get('id');
+
+if (id) {
+
+  if (id === 'bxs345') {
+    $("#tenantInfo").html(`
+    <div class="container">
+    <div class="sidebar">
+        <ul class="menu">
+          <li><a href="tenant.html">Trang chủ</a></li>
+          <li><a href="rooms.html">Thông tin phòng trọ</a></li>
+          <li><a href="notifications-tenant.html">Thông báo</a></li>
+          <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
+          <li><a href="index.html">Đăng xuất</a></li>
+        </ul>
+    </div>
+    <div class="content">
+  <center>
+          <h3>Khu trọ A</h3>
+        </center>
+    <div class="overview">
+      <div class="metric"> 
+        <h4>Hi! Bùi Xuân Sơn</h4>
+        <div class="details">Bạn đã trốn nợ 3 tháng</div>
       </div>
+      </div>
+    </div>
+    </div>
+  `);
+    
+
+  } else if (id === 'hvc123') {
+    $("#tenantInfo").html(`
+    <div class="container">
+    <div class="sidebar">
+        <ul class="menu">
+          <li><a href="tenant.html">Trang chủ</a></li>
+          <li><a href="rooms.html">Thông tin phòng trọ</a></li>
+          <li><a href="notifications-tenant.html">Thông báo</a></li>
+          <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
+          <li><a href="index.html">Đăng xuất</a></li>
+        </ul>
+    </div>
+    <div class="content">
+      <center>
+          <h3>Khu trọ B</h3>
+        </center>
+    <div class="overview">
+      <div class="metric">
+        <h4>Hi! Hoàng Văn Cường</h4> 
+        <div class="details">Phòng bạn bị mất điện vô thời hạn</div>
+      </div>
+    </div>
+    </div>
+    </div>
+  `);
+    
+
+  }
+} else {
+  $("#tenantInfo").html(`
+    <input type="text" id="idInput" placeholder="Nhập mã phòng"> 
+    <button onclick="goToId()">Truy cập</button>
+      <a href="index.html">Quay lại</a>
+  `);
+  
+  function goToId() {
+    var inputId = $("#idInput").val();
+    window.location.href = "tenant.html?id=" + inputId; 
+  }
+}
+</script>
+
 </body>
 
 </html>

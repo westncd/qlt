@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nhập thông tin chủ trọ</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="style.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <style>
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.upload-input {
+  display: none; 
+}
+  </style>
+</head>
+
+<body>
+<div class="login-form">
+
+<h3>Nhập thông tin chủ trọ</h3>
+
+<form>
+
+  <label>Họ tên:</label>
+  <input type="text" id="name">
+
+  <label>Giới tính:</label>
+  <select id="gender">
+    <option>Nam</option>
+    <option>Nữ</option>
+  </select>
+
+  <label>Năm sinh:</label>
+  <input type="text" id="birthYear">
+
+  <label>SĐT:</label>
+  <input type="text" id="phone">
+  
+  <label>Số CCCD:</label>
+  <input type="text" id="cccd">
+
+  <label>Số TK Ngân hàng:</label>
+  <input type="text" id="bankAccount">
+
+  <label>Upload mã QR:</label>
+  <input type="file" id="bankQR" class="upload">
+
+  <label>Số TK Momo:</label>
+  <input type="text" id="momoAccount">
+
+  <label>Upload mã QR Momo:</label>
+  <input type="file" id="momoQR" class="upload">
+
+  <button onclick="saveInfo()">Lưu thông tin</button>
+  <a href="index.html">Quay lại</a>
+
+</form>
+</div>
+
+<script>
+  function saveInfo() {
+    // code to save input data
+
+    alert("Lưu thông tin thành công!");
+  }  
+</script>
+
+</body>
+</html>

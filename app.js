@@ -1,34 +1,33 @@
-// Hàm xử lý submit form login
 $("#loginForm").submit(function(event) {
-
-  // Ngăn chặn submit mặc định
   event.preventDefault();
 
-  // Lấy dữ liệu người dùng nhập
   var username = $("#username").val(); 
   var password = $("#password").val();
 
-  // Kiểm tra dữ liệu hợp lệ
   if(username && password) {
 
-    // Kiểm tra quyền người dùng
-    if(username == "host" && password == "1234") {
-    
-      // Chuyển trang nếu là chủ trọ  
+      if(username == "host" && password == "1234") {
       window.location.href = "host.html";
-
-    } else if(username == "tenant" && password == "1234") {
-
-      // Chuyển trang nếu là người thuê
-      window.location.href = "tenant.html";
-
-    } else {
-      // Hiển thị thông báo lỗi nếu tên đăng nhập không hợp lệ
-      alert("Invalid username"); 
-    }
-
-  } else {
-    alert("Vui lòng nhập đầy đủ thông tin");
-  }
   
+    } else if(username == "hvc123" && password == "1234") { 
+      window.location.href = "tenant.html?id=hvc123";
+    
+    } else if(username == "bxs345" && password == "1234") {
+      window.location.href = "tenant.html?id=bxs345";
+  
+    } else if(username == "newuser" && password == "1234") {
+          
+      var userType = prompt("Bạn là (1 - chủ trọ | 2 - khách thuê): ", "");
+      
+      if(userType == "1") {
+        window.location.href = "submit.html";
+  
+      } else if(userType == "2") {
+        window.location.href = "tenant.html"; 
+      }
+  
+    } else {
+      alert("Sai tài khoản hoặc mật khẩu!"); 
+    }
+  }
 });
