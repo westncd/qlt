@@ -9,7 +9,14 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
   background-image: url('background.jpg');
+  max-width: 1200px; 
+  margin: 0 auto;
+}
 
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
 }
 
 
@@ -21,7 +28,7 @@ body {
 }
 
 .header h1 {
-  margin-bottom: 10px;  
+  margin-bottom: 15px;  
 }
 
 h1 {
@@ -33,6 +40,9 @@ h1 {
   background-size: cover;
   background-position: center;
   padding: 50px 0;
+  max-width: 400px; 
+  margin: 10px auto;
+  display: block;
   line-height: 1.5;
 }
 
