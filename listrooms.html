@@ -264,10 +264,9 @@
       } else if (motelId === 'delete') {
 
 $("#roomsList").html(`
-  <h3>Xóa khu trọ</h3>  
-
-  <form>
     <div class="login-form">
+        <form>
+        <h3>Xóa khu trọ</h3>
     <div>
       <label>Chọn khu trọ:</label>
 
@@ -280,8 +279,47 @@ $("#roomsList").html(`
     </div>
 
     <button>Xóa</button>   
+    </form>
     </div>
-  </form>
+`);
+
+} else if (motelId === 'add') {
+
+$("#roomsList").html(`
+<div class="login-form">
+<h3>Thêm khu trọ mới</h3>
+
+<form>
+  <div>
+    <label>Tên khu trọ:</label>
+    <input type="text" id="tenKhuTro">
+  </div>
+
+  <div>
+    <label>Địa chỉ:</label>
+    <input type="text" id="diaChi">
+  </div>
+
+  <div>
+    <label>Số phòng:</label>
+    <input type="number" id="soPhong">
+  </div>
+
+  <div>
+    <label>Diện tích:</label>
+    <input type="text" id="dienTich">
+  </div>
+
+  <div>
+    <label>Giá thuê:</label>
+    <input type="number" id="giaThue">
+  </div>
+  
+  <button>Lưu</button>
+  <a href="motels.html">Quay lại</a>
+
+</form>
+</div>
 `);
 
 } else {
@@ -389,19 +427,27 @@ $("#roomsList").html(`
 
     function showPopupThemPhong() {
       document.getElementById("popupThemPhong").innerHTML = `
+      <div class="login-form">
 
-<h3>Thêm phòng mới</h3>
+<h3>Hợp đòng điện tử</h3>
 
 <form>
-  <label>Số phòng</label>
+  <label>Tên phòng</label>
   <input type="text" id="soPhong">
   
-  <label>Diện tích</label>
+  <label>Mô tả phòng</label>
+  <input type="text" id="dientich">
+
+  <label>Thông tin khách thuê</label>
+  <input type="text" id="dientich">
+
+  <label>Chi phí sinh hoạt</label>
   <input type="text" id="dientich">
   
   <button type="button" onclick="themPhong()">Lưu</button>
   <button type="button" onclick="dongForm()">Đóng</button>
 </form>
+</div>
       `;
       document.getElementById("popupThemPhong").style.display = "block";
     }
