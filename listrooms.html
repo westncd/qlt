@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Danh sách phòng trọ</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <link href="style.css" rel="stylesheet">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+</head>
+
+<body>
+      <div id="roomsList"></div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <script>
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var motelId = urlParams.get('id');
+
+        if (motelId === 'a') {
+          
+            $("#roomsList").html(`
+            <div class="container">
+    <div class="sidebar">
+      <div class="user">
+        <img src="avatar.png" class="avatar">
+      </div>
+        <ul class="menu">
+          <li><a href="host.html">Trang chủ</a></li>
+          <li><a href="motels.html">Danh sách khu trọ</a></li>
+          <li><a href="notifications.html">Thông báo</a></li>
+          <li><a href="finance.html">Thông tin chủ trọ</a></li>
+          <li><a href="fee.html">Chi phí phát sinh</a></li>
+          <li><a href="index.html">Đăng xuất</a></li>
+        </ul>
+    </div>
+  
+  
+    <div class="content">
+      <center>
+        <h3>Khu trọ A</h3>
+      </center>
+      <div class="overview">
+        <div class="metric">
+          <h4>Phòng 201</h4>
+          <button onclick="showPopup(this)" data-id="201">Chi tiết</button>
+        </div>
+      
+        <div class="metric">
+            <h4>Phòng 202</h4>
+            <button onclick="showPopup(this)" data-id="202">Chi tiết</button>
+        </div>
+
+        <div class="metric">
+            <h4>Phòng 203</h4>
+            <button onclick="showPopup(this)" data-id="203">Chi tiết</button>
+        </div>
+
+        <div class="metric">
+            <h4>Phòng 204</h4>
+            <button onclick="showPopup(this)" data-id="204">Chi tiết</button>
+        </div>
+      </div>
+
+      <div id="roomDetailsPopup" class="popup">
+
+<div id="popupContent"></div>
+
+</div>
+      <div>
+        <button onclick="showPopupThemPhong()">Thêm phòng mới</button>
+      </div>
+      <div id="popupThemPhong" class="popup"></div>
+    </div>
+
+              
+            `);
+
+
+        } else if (motelId === 'b') {
+          
+          $("#roomsList").html(`
+
+
+          <div class="container">
+  <div class="sidebar">
+    <div class="user">
+      <img src="avatar.png" class="avatar">
+    </div>
+      <ul class="menu">
+        <li><a href="host.html">Trang chủ</a></li>
+        <li><a href="motels.html">Danh sách khu trọ</a></li>
+        <li><a href="notifications.html">Thông báo</a></li>
+        <li><a href="finance.html">Thông tin chủ trọ</a></li>
+        <li><a href="fee.html">Chi phí phát sinh</a></li>
+        <li><a href="index.html">Đăng xuất</a></li>
+      </ul>
+  </div>
+
+
+  <div class="content">
+    <center>
+      <h3>Khu trọ B</h3>
+    </center>
+    <div class="overview">
+      <div class="metric">
+        <h4>Phòng 201</h4>
+        <button onclick="showPopup(this)" data-id="201">Chi tiết</button>
+      </div>
+    
+      <div class="metric">
+          <h4>Phòng 202</h4>
+          <button onclick="showPopup(this)" data-id="202">Chi tiết</button>
+      </div>
+
+      <div class="metric">
+          <h4>Phòng 203</h4>
+          <button onclick="showPopup(this)" data-id="203">Chi tiết</button>
+      </div>
+
+      <div class="metric">
+          <h4>Phòng 204</h4>
+          <button onclick="showPopup(this)" data-id="204">Chi tiết</button>
+      </div>
+    </div>
+    <div>
+        
+      <div id="roomDetailsPopup" class="popup">
+
+<div id="popupContent"></div>
+
+</div>
+      <button class="add"><a href="listrooms.html?id=add">Thêm phòng</a></button>
+    </div>
+  </div>      
+          `);
+      } else if (motelId === 'c') {
+          
+          $("#roomsList").html(`
+
+
+          <div class="container">
+  <div class="sidebar">
+    <div class="user">
+      <img src="avatar.png" class="avatar">
+    </div>
+      <ul class="menu">
+        <li><a href="host.html">Trang chủ</a></li>
+        <li><a href="motels.html">Danh sách khu trọ</a></li>
+        <li><a href="notifications.html">Thông báo</a></li>
+        <li><a href="finance.html">Thông tin chủ trọ</a></li>
+        <li><a href="fee.html">Chi phí phát sinh</a></li>
+        <li><a href="index.html">Đăng xuất</a></li>
+      </ul>
+  </div>
+
+
+  <div class="content">
+    <center>
+      <h3>Khu trọ C</h3>
+    </center>
+    <div class="overview">
+      <div class="metric">
+        <h4>Phòng 201</h4>
+        <button onclick="showPopup(this)" data-id="201">Chi tiết</button>
+      </div>
+    
+      <div class="metric">
+          <h4>Phòng 202</h4>
+          <button onclick="showPopup(this)" data-id="202">Chi tiết</button>
+      </div>
+
+      <div class="metric">
+          <h4>Phòng 203</h4>
+          <button onclick="showPopup(this)" data-id="203">Chi tiết</button>
+      </div>
+
+      <div class="metric">
+          <h4>Phòng 204</h4>
+          <button onclick="showPopup(this)" data-id="204">Chi tiết</button>
+      </div>
+    </div>
+    <div>
+        
+      <div id="roomDetailsPopup" class="popup">
+
+<div id="popupContent"></div>
+
+</div>
+      <button class="add"><a href="listrooms.html?id=add">Thêm phòng</a></button>
+    </div>
+  </div>      
+          `);
+      } else if (motelId === 'd') {
+          
+          $("#roomsList").html(`
+
+
+          <div class="container">
+  <div class="sidebar">
+    <div class="user">
+      <img src="avatar.png" class="avatar">
+    </div>
+      <ul class="menu">
+        <li><a href="host.html">Trang chủ</a></li>
+        <li><a href="motels.html">Danh sách khu trọ</a></li>
+        <li><a href="notifications.html">Thông báo</a></li>
+        <li><a href="finance.html">Thông tin chủ trọ</a></li>
+        <li><a href="fee.html">Chi phí phát sinh</a></li>
+        <li><a href="index.html">Đăng xuất</a></li>
+      </ul>
+  </div>
+
+
+  <div class="content">
+    <center>
+      <h3>Khu trọ D</h3>
+    </center>
+    <div class="overview">
+      <div class="metric">
+        <h4>Phòng 201</h4>
+        <button onclick="showPopup(this)" data-id="201">Chi tiết</button>
+      </div>
+    
+      <div class="metric">
+          <h4>Phòng 202</h4>
+          <button onclick="showPopup(this)" data-id="202">Chi tiết</button>
+      </div>
+
+      <div class="metric">
+          <h4>Phòng 203</h4>
+          <button onclick="showPopup(this)" data-id="203">Chi tiết</button>
+      </div>
+
+      <div class="metric">
+          <h4>Phòng 204</h4>
+          <button onclick="showPopup(this)" data-id="204">Chi tiết</button>
+      </div>
+    </div>
+    <div>
+        
+      <div id="roomDetailsPopup" class="popup">
+
+<div id="popupContent"></div>
+
+</div>
+      <button class="add"><a href="listrooms.html?id=add">Thêm phòng</a></button>
+    </div>
+  </div>      
+          `);
+      } else if (motelId === 'delete') {
+
+$("#roomsList").html(`
+  <h3>Xóa khu trọ</h3>  
+
+  <form>
+    <div class="login-form">
+    <div>
+      <label>Chọn khu trọ:</label>
+
+      <select id="selectMotel">
+        <option value="a">Khu A</option>
+        <option value="b">Khu B</option>
+        <option value="c">Khu C</option>
+        <option value="d">Khu D</option>
+      </select>
+    </div>
+
+    <button>Xóa</button>   
+    </div>
+  </form>
+`);
+
+} else {
+
+        $("#roomsList").html(`
+        <div class="input-section">
+        <input type="text" id="motelIdInput" placeholder="Nhập mã khu trọ">
+        <button onclick="goToMotelId()">Kiểm tra khu trọ</button> 
+        </div>
+  
+        <button class="back-button" onclick="back()">
+        Quay lại
+        </button>
+        `);
+
+    function goToMotelId() {
+        var inputId = $("#motelIdInput").val();
+        window.location.href = "listrooms.html?id=" + inputId;  
+    }
+
+    function back(){
+        window.history.back();
+    }
+
+    }
+
+      </script>
+
+
+
+<script>
+
+    // Dữ liệu các phòng 
+    var roomsData = {
+      "201": {
+        name: "Phòng 201",
+        tenant: "Hoàng Văn Cường" ,
+        sdt: "123456",
+        cccd: "03820012345",
+        address: "Long Biên",
+        des: "30m2, có ban công, có nóng lạnh, bếp, vskk",
+        cost: "3tr2"
+      },
+      "202": {
+        name: "Phòng 202",
+        tenant: "Bùi Xuân Sơn",
+        sdt: "123456",
+        cccd: "03820012345",
+        address: "Long Biên",
+        des: "30m2, có ban công, có nóng lạnh, bếp, vskk",
+        cost: "3tr2" 
+      },
+      "203": {
+        name: "Phòng 203",
+        tenant: "Bùi Xuân Sơn",
+        sdt: "123456",
+        cccd: "03820012345",
+        address: "Long Biên",
+        des: "30m2, có ban công, có nóng lạnh, bếp, vskk",
+        cost: "3tr2" 
+      },
+      "204": {
+        name: "Phòng 204",
+        tenant: "Bùi Xuân Sơn",
+        sdt: "123456",
+        cccd: "03820012345",
+        address: "Long Biên",
+        des: "30m2, có ban công, có nóng lạnh, bếp, vskk",
+        cost: "3tr2" 
+      }
+    };
+    
+    function showPopup(room) {
+    
+      var roomId = room.dataset.id;
+      var details = roomsData[roomId];
+    
+
+      document.getElementById("popupContent").innerHTML = `
+    <div class="overview">
+      <div class="metric">
+          <h5>${details.name}</h5>
+        <div>Người thuê: ${details.tenant}</div>
+        <div>SDT: ${details.sdt}</div>
+        <div>Số CCCD: ${details.cccd}</div>
+        <div>Địa chỉ: ${details.address}</div>
+        <div>Mô tả: ${details.des}</div>
+        <div>Giá: ${details.cost}</div>
+        <button onclick="closePopup()">Đóng</button>
+      </div>
+    </div>
+      `;
+    
+      document.getElementById("roomDetailsPopup").style.display = "block";
+    
+    }
+    
+    function closePopup() {
+      document.getElementById("roomDetailsPopup").style.display = "none";
+    }
+    
+    </script>
+
+<script>
+
+    function showPopupThemPhong() {
+      document.getElementById("popupThemPhong").innerHTML = `
+
+<h3>Thêm phòng mới</h3>
+
+<form>
+  <label>Số phòng</label>
+  <input type="text" id="soPhong">
+  
+  <label>Diện tích</label>
+  <input type="text" id="dientich">
+  
+  <button type="button" onclick="themPhong()">Lưu</button>
+  <button type="button" onclick="dongForm()">Đóng</button>
+</form>
+      `;
+      document.getElementById("popupThemPhong").style.display = "block";
+    }
+    
+    function dongForm() {
+      document.getElementById("popupThemPhong").style.display = "none"; 
+    }
+    
+    function themPhong() {      
+      alert("Đã thêm phòng thành công!");
+      dongForm();
+    }
+    
+  </script>
+
+
+</body>
+</html>
