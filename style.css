@@ -118,7 +118,7 @@ select {
 
 button {
   padding: 12px 20px;
-  background-color: #4caf50;
+  background-color: #008004;
   color: #fff;
   border: none;  
   cursor: pointer;  
@@ -126,7 +126,7 @@ button {
 }
 
 .add {
-  background: green;
+  background: rgb(85, 133, 85);
 }
 
 .delete {
@@ -160,6 +160,20 @@ button {
   text-decoration: none;
 }
 
+.sidebar .user {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.sidebar .avatar {
+  align-items: center;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: block;
+}
 
 .overview {
   display: flex;
