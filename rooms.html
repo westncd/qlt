@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Thông tin phòng trọ</title>
+  <title>Danh sách khachs thuê</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -9,26 +9,112 @@
 
   <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
+  <style>
+    .container .content {
+      margin: 100px auto;
+    }
+  </style>
+
 </head>
 
 <body>
-  <div class="container">
+  
+    <div id="tenantInfo"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+var id = urlParams.get('id');
+
+if (id) {
+
+  if (id === '201') {
+    $("#tenantInfo").html(`
+    <div class="container">
     <div class="sidebar">
       <div class="user">
-        <img src="avatar.png" class="avatar">
-      </div>
+      <img src="avatar.png" class="avatar">
+    </div>
         <ul class="menu">
-          <li><button type="button" onclick="back()">Quay lại trang trước</button></li>
-          <li><a href="rooms.html">Thông tin phòng trọ</a></li>
+          <li><a href="">Trang chủ</a></li>
+          <li><a href="rooms.html?id=201">Thông tin phòng trọ</a></li>
           <li><a href="notifications-tenant.html">Thông báo</a></li>
           <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
           <li><a href="index.html">Đăng xuất</a></li>
         </ul>
     </div>
-  
-  
     <div class="content">
+        <div class="overview">
+      <div class="metric">
+          <h3>201</h3>
+        <div>Người thuê: Bùi Xuân Sơn</div>
+        <div>SDT: 0345678910</div>
+        <div>Số CCCD: 0382009865</div>
+        <div>Địa chỉ: Hà Đông</div>
+        <div>Mô tả: Phòng mất nước</div>
+        <div>Giá: 3tr2</div>
+      </div>
     </div>
+    </div>
+    </div>
+  `);
+    
+
+  } else if (id === '302') {
+    $("#tenantInfo").html(`
+    <div class="container">
+    <div class="sidebar">
+      <div class="user">
+      <img src="avatar.png" class="avatar">
+    </div>
+        <ul class="menu">
+          <li><a href="">Trang chủ</a></li>
+          <li><a href="rooms.html?id=302">Thông tin phòng trọ</a></li>
+          <li><a href="notifications-tenant.html">Thông báo</a></li>
+          <li><a href="finance-tenant.html">Thông tin chủ trọ và đóng tiền</a></li>
+          <li><a href="index.html">Đăng xuất</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="overview">
+      <div class="metric">
+          <h3>302</h3>
+        <div>Người thuê: Hoàng Văn Cường</div>
+        <div>SDT: 0345678910</div>
+        <div>Số CCCD: 0382009865</div>
+        <div>Địa chỉ: Gia Lâm</div>
+        <div>Mô tả: Phòng mất điện</div>
+        <div>Giá: 3tr2</div>
+      </div>
+    </div>
+    </div>
+    </div>
+  `);
+    
+
+  }
+} else {
+  $("#tenantInfo").html(`
+    <input type="text" id="idInput" placeholder="Nhập số phòng"> 
+    <button onclick="goToId()">Truy cập</button>
+      <div class="link-btn">
+      <a href="index.html">Quay lại</a>
+      </div>
+  `);
+  
+  function goToId() {
+    var inputId = $("#idInput").val();
+    window.location.href = "rooms.html?id=" + inputId; 
+  }
+
+  function back(){
+          history.back();
+      }
+}
+</script>
+
 </body>
 
 </html>
