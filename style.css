@@ -246,26 +246,3 @@ td a {
 }
 
 
-
-.payments {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card {
-  width: 45%;
-  background-color: #6b6868;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 5px;  
-}
-
-.card img {
-  width: 100%;
-  margin-bottom: 10px;
-} 
-
-.account {
-  font-size: 14px;
-  text-align: center; 
-}
