@@ -20,7 +20,7 @@
     <form class="login-form">
 
       <div class="input-group">
-        <input type="text" placeholder="Họ và tên">
+        <input type="text" placeholder="Tên tài khoản">
       </div>
 
       <div class="input-group">
@@ -44,6 +44,42 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="app.js"></script>
+  <script>
+    $('.login-form').submit(function(e) {
+  e.preventDefault();
+  
+  var name = $('input[placeholder="Tên tài khoản"]').val();
+  var phone = $('input[placeholder="Số điện thoại"]').val();
+  var password = $('input[placeholder="Mật khẩu"]').val();
+  var rePassword = $('input[placeholder="Nhập lại mật khẩu"]').val();
+  
+  var error = '';
+  
+  if(!name) {
+    error += 'Vui lòng nhập họ tên\n';
+  }
+  
+  if(!phone) {
+    error += 'Vui lòng nhập số điện thoại\n'; 
+  }
+  
+  if(!password) {
+    error += 'Vui lòng nhập mật khẩu\n';
+  }
+  
+  if(password !== rePassword) {
+    error += 'Mật khẩu không khớp\n';
+  }
+  
+  if(error) {
+    alert(error);
+    return;
+  } 
+  
+  alert('Đăng ký thành công!');
+  
+});
+  </script>
 
 </body>
 </html>
