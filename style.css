@@ -209,6 +209,18 @@ button {
   color:#fff;
 }
 
+.metric img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 10px auto;
+}
+
+.account {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 
 table {
   margin: 40px auto; 
