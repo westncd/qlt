@@ -2,4 +2,4 @@
 Quản lý nhà trọ dễ dàng - hiệu quả
 
 
----- chức năng code bằng c++ nằm trong release ----
+---- chức năng code bằng c++ nằm trong MotelManagerOffial.cpp ----
