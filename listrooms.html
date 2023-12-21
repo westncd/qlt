@@ -64,6 +64,10 @@
             <h4>Phòng 204</h4>
             <button onclick="showPopup(this)" data-id="204">Chi tiết</button>
         </div>
+        <div class="metric">
+          <h4>Phòng 205</h4>
+          <button onclick="showPopup(this)" data-id="205">Chi tiết</button>
+        </div>
       </div>
 
       <div id="roomDetailsPopup" class="popup">
@@ -186,6 +190,11 @@
           <h4>Phòng 204</h4>
           <button onclick="showPopup(this)" data-id="204">Chi tiết</button>
       </div>
+      <div class="metric">
+          <h4>Phòng 205</h4>
+          <button onclick="showPopup(this)" data-id="205">Chi tiết</button>
+      </div>
+      
     </div>
     <div>
         
@@ -389,7 +398,18 @@ $("#roomsList").html(`
         address: "Long Biên",
         des: "30m2, có ban công, có nóng lạnh, bếp, vskk",
         cost: "3tr2" 
+      },
+
+      "205": {
+        name: "Phòng 205",
+        tenant: "Bùi Xuân Sơn",
+        sdt: "123456",
+        cccd: "03820012345",
+        address: "Long Biên",
+        des: "30m2, có ban công, có nóng lạnh, bếp, vskk",
+        cost: "3tr2" 
       }
+      
     };
     
     function showPopup(room) {
